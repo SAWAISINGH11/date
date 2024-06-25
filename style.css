@@ -45,12 +45,29 @@ section::before {
 }
 section span {
   position: relative;
-  display: block;
-  width: calc(6.25vw - 2px);
-  height: calc(6.25vw - 2px);
+  /* display: block;*/
+  /* width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px); */
+  height: 90px;
+  width: 50px;
   background: #f2eeee;
+  transform: rotate(45deg);
+  border-radius: 200px 200px 10px 10px;
   z-index: 2;
   transition: 1.5s;
+}
+
+section span ::before {
+  position: absolute;
+  /* width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px); */
+  height: 90px;
+  width: 50px;
+  top: 30px;
+  left: -30px;
+  transform: rotate(-90deg);
+  background-color: blue;
+  border-radius: 200px 200px 0 0;
 }
 section span:hover {
   background: rgb(255, 0, 0);
@@ -105,13 +122,14 @@ section .ask {
   width: 250px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 400px) {
   section span {
     width: calc(10vw - 2px);
     height: calc(10vw - 2px);
   }
 }
-@media (max-width: 600px) {
+
+@media (max-width: 400px) {
   section span {
     width: calc(20vw - 2px);
     height: calc(20vw - 2px);
